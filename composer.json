@@ -16,8 +16,7 @@
         "tests": "phpunit --colors tests/",
         "runit": [
             "Toggenation\\Play\\Runit::run",
-            "Toggenation\\Play\\Runit::dir",
-            "Toggenation\\Play\\MyCommand::run"
+            "Toggenation\\Play\\Runit::dir"
         ],
         "my-command": "Toggenation\\Play\\MyCommand::run"
     },
