@@ -1,0 +1,37 @@
+{
+    "name": "toggenation/play",
+    "description": "Playing with PHP",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Toggenation\\Play\\": "src/",
+            "Toggenation\\Play\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Toggenation\\Play\\Runit::run"
+        ],
+        "tests": "phpunit --colors tests/",
+        "runit": [
+            "Toggenation\\Play\\Runit::run",
+            "Toggenation\\Play\\Runit::dir",
+            "Toggenation\\Play\\MyCommand::run"
+        ],
+        "my-command": "Toggenation\\Play\\MyCommand::run"
+    },
+    "authors": [
+        {
+            "name": "James McDonald",
+            "email": "james@toggen.com.au"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+        "symfony/process": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.3"
+    }
+}
